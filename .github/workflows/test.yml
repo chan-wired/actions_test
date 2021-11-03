@@ -42,7 +42,7 @@ jobs:
     steps:
       - name: set ENV
         run: |
-          echo "{TEST}={${{ github.event.commit.length}} - 2}" >> $GITHUB_ENV
+          echo "TEST=${{ github.event.commit.length}} - 2" >> $GITHUB_ENV
       - name: Release Slack Alert (Dev)
         uses: 8398a7/action-slack@v3
         if: always()
