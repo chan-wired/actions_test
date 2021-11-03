@@ -43,10 +43,12 @@ jobs:
       - name: Release Slack Alert (Dev)
         uses: 8398a7/action-slack@v3
         if: always()
+        run: |
+          echo "{TEST}={${{ github.event.commit.length}} - 2}" >> $GITHUB_ENV
         with:
           status: ${{ job.status }}
           fields: repo,message,commit,author,action,ref,workflow # selectable (default: repo,message)
-          text: Last commit message \n [${{ github.event.commit[github.event.commit.length - 2].message }}] \n is released.
+          text: Last commit message \n [${{ github.event.commit[env.TEST].message }}] \n is released.
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL_DEV }}
   # slack:
