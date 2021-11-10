@@ -24,7 +24,7 @@
     "dotenv": "^10.0.0",
     "envalid": "^7.1.0",
     "express": "^4.17.1",
-    "graphql": "^15.5.1",
+    "graphql": "^16.0.0",
     "graphql-import-node": "^0.0.4",
     "graphql-middleware": "^6.1.4",
     "graphql-shield": "^7.5.0",
