@@ -67,7 +67,7 @@
     "@types/hpp": "0.2.2",
     "@types/jest": "26.0.24",
     "@types/jsonwebtoken": "8.5.5",
-    "@types/lodash": "4.14.176",
+    "@types/lodash": "4.14.178",
     "@types/morgan": "1.9.3",
     "@types/node": "16.11.7",
     "@types/sharp": "0.29.3",
