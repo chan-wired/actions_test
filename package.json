@@ -43,7 +43,7 @@
     "copyfiles": "^2.4.1",
     "express-ipfilter": "^1.2.0",
     "extendable-error": "^0.1.7",
-    "factory.ts": "^0.5.2",
+    "factory.ts": "^1.0.0",
     "faker": "^5.5.3",
     "graphql": "^15.7.2",
     "graphql-import-node": "0.0.4",
