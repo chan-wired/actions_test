@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
   printJob:
     name: Print event
@@ -84,7 +84,7 @@ jobs:
     outputs:
       version: ${{ fromJson(steps.parse-current-version.outputs.content).version }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Parse current Version
         id: parse-current-version
         uses: juliangruber/read-file-action@v1
