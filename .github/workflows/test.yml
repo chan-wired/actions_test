@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check PR method
-        uses: actions/github-script@v5.0.0
+        uses: actions/github-script@v6.1.0
         if: always() && contains('refs/heads/main', github.ref) && github.event.commits[0].author.email != 'bot@renovateapp.com'
         id: check-merge-method
         with:
@@ -42,7 +42,7 @@ jobs:
         env:
           COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
       - name: Set alert message
-        uses: actions/github-script@v5.0.0
+        uses: actions/github-script@v6.1.0
         if: always() && contains('refs/heads/main', github.ref) && github.event.commits[0].author.email != 'bot@renovateapp.com'
         id: set-alert-message
         with:
@@ -98,7 +98,7 @@ jobs:
     if: always()
     steps:
       - name: Check PR method
-        uses: actions/github-script@v5.0.0
+        uses: actions/github-script@v6.1.0
         id: check-merge-method
         with:
           result-encoding: string
@@ -116,7 +116,7 @@ jobs:
       - run: npm install axios
       - name: Trigger Jira Webhook (devel)
         if: github.event_name == 'push' && github.ref == 'refs/heads/devel' && github.event.commits[0].author.email != 'bot@renovateapp.com'
-        uses: actions/github-script@v5.0.0
+        uses: actions/github-script@v6.1.0
         id: parse-deployed-tickets
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
